@@ -1,0 +1,17 @@
+.nav-bar{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    padding-right: 2.5rem;
+}
+.nav-bar > *{
+    margin-right: 5rem;
+}
+
+.linkedin-icon{
+    color: #ffff;
+}
+
+.github-icon{
+    color: #ffff;
+}
