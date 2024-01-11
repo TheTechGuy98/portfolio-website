@@ -1,0 +1,80 @@
+.box {
+  /* Existing styles for .box */
+  box-shadow: 0 0 10px #00dce1; /* Initial state of the shadow */
+  animation: glowShadow 3s infinite; /* Apply the animation */
+  /* Other styles... */
+}
+
+@keyframes glowShadow {
+  0%, 100% {
+      box-shadow: 0 0 10px #00dce1; /* Initial and final state of the shadow */
+  }
+  30% {
+      box-shadow: 0 0 100px #00dce1; /* Intensified state of the shadow */
+  }
+}
+.box-before{
+    position:absolute;
+    width:150%;
+    height: 150%;
+    background: conic-gradient(from 90deg, rgb(0 0 0 /0%) 70%,rgb(11 70 230 /9%) 80%,rgb(0 220 225 ) 100%);
+    content:'';
+    left:-25%;
+    top:-25%;
+    animation: rotate 2s infinite linear;
+    border-radius: 100%;
+    padding-right: 25%;
+    animation: rotate 2s infinite linear, glowing 3s infinite ease-in-out;
+  }
+  
+  .box-after{
+    position:absolute;
+    width:94%;
+    height: 94%;
+    background-color: #020f22;
+    top:3%;
+    left:3%;
+    content: '';
+    border-radius: 100%;
+  }
+
+
+  
+  @keyframes rotate {
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+  .circle{
+    background-color: #00dce1;
+    box-shadow:
+    0 0 60px 0.25rem #fff,  /* inner white */
+    0 0 140px 0.25rem #00dce1; /* outer cyan */
+  }
+
+
+  .nav-button:hover{
+    color: #11CD6D;
+  }
+
+  .background1{
+    position:absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+}
+
+@keyframes glowing {
+  0%, 100% {
+    box-shadow: 
+      0 0 60px 0.25rem #fff, /* inner white */
+      0 0 140px 0.25rem #00dce1; /* outer cyan */
+  }
+  50% {
+    box-shadow: 
+      0 0 90px 0.5rem #fff, /* inner white */
+      0 0 200px 0.5rem #00dce1; /* outer cyan */
+  }
+}
